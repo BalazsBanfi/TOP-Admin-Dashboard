@@ -14,7 +14,7 @@
 }
 
 * {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -74,6 +74,7 @@ main {
 ***Nav section***
 *****************/
 
+nav > div,
 nav li {
   padding: var(--padS);
   transition-duration: 0.3s;
@@ -82,7 +83,6 @@ nav li {
 }
 
 nav li:hover {
-  text-decoration: underline;
   transform: scale(1.05);
   opacity: 0.8;
   cursor: pointer;
@@ -94,11 +94,21 @@ nav li:active {
   cursor: pointer;
 }
 
-
 nav a,
 nav a:visited,
 nav a:active {
   color: var(--white);
+}
+
+nav img {
+  width: 40px;
+  margin-right: 15px;
+  filter: invert(1) brightness(10);
+  /* border: none; */
+}
+
+nav li img {
+  padding: 0 8px 0 8px;
 }
 
 /****************
