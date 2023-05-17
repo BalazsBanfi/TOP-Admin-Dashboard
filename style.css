@@ -15,7 +15,7 @@
 }
 
 * {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -55,7 +55,6 @@ header {
   font-weight: 700;
   display: grid;
   grid-template: 45px 1fr / 1fr 1fr;
-
   row-gap: var(--padL);
 }
 
@@ -72,6 +71,11 @@ nav {
 
 main {
   grid-area: 2 / 2 / 3 / 3;
+  padding: var(--padXL) var(--padXL) var(--padXL) var(--padM);
+  background-color: var(--grayBg);
+  display: grid;
+  grid-template: min-content 1fr / 1fr 400px;
+  gap: var(--padM);
 }
 
 /*******************
@@ -188,7 +192,6 @@ nav li:hover {
 }
 
 nav li:active {
-  text-decoration: underline;
   transform: translateY(3px);
   cursor: pointer;
 }
@@ -213,29 +216,20 @@ nav li img {
 ***Main section***
 *****************/
 
-main {
-  width: 100%;
+/* Project cards */
+
+.projects {
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+  gap: var(--padM);
 }
 
-/* Huddle header */
-
-/* Huddle content */
-
-/******************
-***Cards section***
-******************/
-
-/***********
-***Footer***
-***********/
-
-/***************
-***Anchor tag***
-***************/
-
-/**************
-***Fa brands***
-**************/
+.card {
+  padding: var(--padL) var(--padM);
+  background-color: var(--white);
+  border-radius: 8px;
+  border-left: 8px solid var(--orange);
+}
 
 /************************
 ***Media query section***
