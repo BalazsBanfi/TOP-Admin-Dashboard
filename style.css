@@ -147,6 +147,28 @@ form img {
   opacity: 0.8;
 }
 
+/* Buttons */
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.button {
+  width: 135px;
+  padding: var(--padM) var(--padXL);
+  background-color: var(--skyBlue);
+  border-radius: 50px;
+  color: var(--white);
+  text-align: center;
+  font-weight: 700;
+}
+
+.button {
+  margin-left: var(--padXL);
+}
+
 /****************
 ***Nav section***
 *****************/
