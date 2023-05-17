@@ -147,7 +147,7 @@ form img {
 }
 
 .name a:hover {
-  transform: scale(1.05);
+  transform: scale(1.15);
   opacity: 0.8;
 }
 
@@ -186,7 +186,7 @@ nav li {
 }
 
 nav li:hover {
-  transform: scale(1.05);
+  transform: scale(1.15);
   opacity: 0.8;
   cursor: pointer;
 }
@@ -220,7 +220,7 @@ nav li img {
 
 .projects {
   display: grid;
-  grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+  grid-template: repeat(2, 1fr) / repeat(3, 1fr);
   gap: var(--padM);
 }
 
@@ -229,7 +229,44 @@ nav li img {
   background-color: var(--white);
   border-radius: 8px;
   border-left: 8px solid var(--orange);
+  position: relative;
 }
+
+.card h4 {
+  margin-bottom: var(--padS);
+}
+
+.card p {
+  font-size: 12px;
+}
+
+/* Card icons */
+
+.cardIcons {
+  display: flex;
+  column-gap: var(--padL);
+  position: absolute;
+  bottom: var(--padM);
+  right: var(--padM);
+}
+
+.cardIcons img {
+  width: 24px;
+  filter: invert(0);
+}
+
+
+.cardIcons a {
+  display: inline-block;
+  transition-duration: 0.3s;
+}
+
+.cardIcons a:hover {
+  transform: scale(1.15);
+  opacity: 0.8;
+}
+
+
 
 /************************
 ***Media query section***
