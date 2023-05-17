@@ -15,7 +15,7 @@
 }
 
 * {
-  /* border: 1px solid red; */
+  border: 1px solid red;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -147,7 +147,7 @@ form img {
 }
 
 .name a:hover {
-  transform: scale(1.15);
+  transform: scale(1.1);
   opacity: 0.8;
 }
 
@@ -156,7 +156,22 @@ form img {
 .buttons {
   display: flex;
   justify-content: flex-end;
+  column-gap: var(--padXL);
   align-items: center;
+}
+
+.buttons a {
+  display: inline-block;
+  transition-duration: 0.3s;
+}
+
+.buttons a:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+.buttons a:active {
+  transform: translateY(3px);
 }
 
 .button {
@@ -167,10 +182,6 @@ form img {
   color: var(--white);
   text-align: center;
   font-weight: 700;
-}
-
-.button {
-  margin-left: var(--padXL);
 }
 
 /****************
@@ -186,7 +197,7 @@ nav li {
 }
 
 nav li:hover {
-  transform: scale(1.15);
+  transform: scale(1.1);
   opacity: 0.8;
   cursor: pointer;
 }
@@ -216,7 +227,9 @@ nav li img {
 ***Main section***
 *****************/
 
-/* Project cards */
+/******************
+***Project cards***
+******************/
 
 .projects {
   display: grid;
@@ -237,7 +250,7 @@ nav li img {
 }
 
 .card p {
-  font-size: 12px;
+  font-size: 14px;
 }
 
 /* Card icons */
@@ -255,18 +268,48 @@ nav li img {
   filter: invert(0);
 }
 
-
 .cardIcons a {
   display: inline-block;
   transition-duration: 0.3s;
 }
 
 .cardIcons a:hover {
-  transform: scale(1.15);
+  transform: scale(1.1);
   opacity: 0.8;
 }
 
+/**************************
+***Announcements section***
+**************************/
 
+.announcements {
+  display: grid;
+  grid-template: min-content 1fr min-content / 1fr;
+  row-gap: var(--padM);
+}
+
+.announcements > div {
+  padding: var(--padL) var(--padM);
+  background-color: var(--white);
+  border-radius: 8px;
+}
+
+.announcements h3 {
+  align-self: flex-end;
+}
+
+.announcements h4 {
+  font-size: 16px;
+}
+
+.announcements p {
+  font-size: 12px;
+  padding-right: var(--padL);
+}
+
+.announcements p:not(:last-child) {
+  padding-bottom: var(--padL);
+}
 
 /************************
 ***Media query section***
