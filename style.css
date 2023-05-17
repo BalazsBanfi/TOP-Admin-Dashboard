@@ -3,8 +3,14 @@
 ******************/
 
 :root {
-
-  
+  --skyBlue: #0ea5e9;
+  --grayBg: #cbd5e1;
+  --orange: #fb923c;
+  --white: #ffffff;
+  --padS: 0.5rem;
+  --padM: 1rem;
+  --padL: 1.5rem;
+  --padXL: 2rem;
 }
 
 * {
@@ -18,7 +24,7 @@
 
 html {
   font-size: 18px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   color: black;
 }
 
@@ -29,11 +35,7 @@ body {
   text-align: left;
   background-color: white;
   display: grid;
-  place-items: center;
-}
-
-main {
-  width: 100%;
+  grid-template: 150px 1fr / 250px 1fr;
 }
 
 img {
@@ -41,12 +43,70 @@ img {
   max-width: 100%;
 }
 
+/*************
+***Sections***
+*************/
+
+header {
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+nav {
+  grid-area: 1 / 1 / 3 / 2;
+  padding: var(--padM);
+  background-color: var(--skyBlue);
+  color: var(--white);
+  font-weight: 700;
+  display: flex;
+  row-gap: var(--padXL);
+  flex-direction: column;
+}
+
+main {
+  grid-area: 2 / 2 / 3 / 3;
+}
+
 /*******************
-***Huddle section***
+***Header section***
 *******************/
 
-/* Huddle header */
+/****************
+***Nav section***
+*****************/
 
+nav li {
+  padding: var(--padS);
+  transition-duration: 0.3s;
+}
+
+nav li:hover {
+  text-decoration: underline;
+  transform: scale(1.05);
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+nav li:active {
+  text-decoration: underline;
+  transform: translateY(3px);
+  cursor: pointer;
+}
+
+nav a,
+nav a:visited,
+nav a:active {
+  color: var(--white);
+}
+
+/****************
+***Main section***
+*****************/
+
+main {
+  width: 100%;
+}
+
+/* Huddle header */
 
 /* Huddle content */
 
@@ -54,27 +114,18 @@ img {
 ***Cards section***
 ******************/
 
-
 /***********
 ***Footer***
 ***********/
-
-
-
 
 /***************
 ***Anchor tag***
 ***************/
 
-
 /**************
 ***Fa brands***
 **************/
 
-
-
 /************************
 ***Media query section***
 ************************/
-
-
