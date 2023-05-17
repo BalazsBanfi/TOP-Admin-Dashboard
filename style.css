@@ -14,7 +14,7 @@
 }
 
 * {
-  /* border: 1px solid red; */
+  border: 1px solid red;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -49,6 +49,13 @@ img {
 
 header {
   grid-area: 1 / 2 / 2 / 3;
+  padding: var(--padM);
+  color: black;
+  font-weight: 700;
+  display: grid;
+  grid-template: 45px 1fr / 1fr 1fr;
+
+  row-gap: var(--padS);
 }
 
 nav {
@@ -58,8 +65,8 @@ nav {
   color: var(--white);
   font-weight: 700;
   display: flex;
-  row-gap: var(--padXL);
   flex-direction: column;
+  row-gap: var(--padXL);
 }
 
 main {
@@ -69,6 +76,40 @@ main {
 /*******************
 ***Header section***
 *******************/
+
+/* Form */
+
+form {
+  display: flex;
+  align-items: center;
+}
+
+form img {
+  width: 40px;
+  margin-right: var(--padL);
+  filter: invert(0);
+}
+
+#search {
+  width: 85%;
+  padding: var(--padS);
+  font-size: var(--padM);
+  background-color: var(--grayBg);
+  border-radius: 20px;
+}
+
+/* Logo */
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.logo > img {
+  width: 40px;
+  margin-right: 25px;
+}
 
 /****************
 ***Nav section***
@@ -104,7 +145,6 @@ nav img {
   width: 40px;
   margin-right: 15px;
   filter: invert(1) brightness(10);
-  /* border: none; */
 }
 
 nav li img {
