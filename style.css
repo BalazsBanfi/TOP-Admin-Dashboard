@@ -15,7 +15,7 @@
 }
 
 * {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -314,3 +314,33 @@ nav li img {
 /************************
 ***Media query section***
 ************************/
+
+@media screen and (max-width: 1350px) {
+  h1 {
+    font-size: 1rem;
+  }
+  .buttons {
+    column-gap: var(--padS);
+  }
+
+  .button {
+    width: 80px;
+    padding: var(--padS) var(--padS);
+    font-weight: 500;
+  }
+
+  main {
+    grid-template: min-content 1fr / 1fr 350px;
+  }
+
+  .projects {
+    grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  main {
+    grid-template: min-content 1fr / 1fr 250px;
+  }
+
+}
